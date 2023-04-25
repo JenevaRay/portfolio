@@ -1,0 +1,237 @@
+:root {
+    --grey: #333;
+    --light: #FFF;
+    --hover: #0077c0;
+    --dark: #000;
+}
+
+/* Set the background color and font for the entire website */
+body {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    /* width: 100%; */
+    display: flex;
+    background-color: var(--light);
+    color: var(--grey);
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+header h1 {
+    align-content: flex-start;
+    font-size: 250%;
+    font-style: "Brush Script MT, Brush Script Std, cursive";
+}
+
+nav ul {
+    align-items: center;
+    font-size: 150%;
+    align-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    flex-wrap: nowrap;
+}
+
+nav ul li {
+    /* flex: 1 0 auto; */
+    margin-right: 20px;
+    padding: 1%;
+    flex-wrap: nowrap;
+}
+
+nav ul li a {
+    color: var(--dark);
+}
+
+a {
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: var(--hover);
+}
+
+main {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+section {
+    flex: 1 0 auto;
+    background-color: var(--grey);
+    color: var(--light);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+footer {
+    background-color: var(--grey);
+    color: var(--light);
+    padding: 20px;
+    text-align: center;
+}
+
+footer ol {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+footer ol li a {
+    color: var(--light);
+}
+
+footer ol li {
+    flex: 1 0 auto;
+}
+
+figure {
+    display: block;
+}
+
+figcaption {
+    font-family: "Brush Script MT, Brush Script Std, cursive";
+    margin-bottom: 1em;
+}
+
+figcaption span {
+    font-size: 10px;
+}
+
+h2 {
+    padding: 20px;
+    font-size: 200%;
+    font-weight: bold;
+    justify-content: center;
+}
+
+h3 {
+    padding: 20px;
+    font-size: 150%;
+}
+
+section p {
+    padding: 20px;
+    font-size: 16px;
+    width: 0.95fr;
+
+}
+
+.bigcards {
+    flex: 1 0 100%;
+    display: flex;
+    flex-flow: column wrap;
+    /* flex-direction: column; */
+    list-style: none;
+    border-radius: 10px;
+    width: calc(100%);
+    overflow: hidden;
+}
+
+.bigcard {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    flex-direction: column;
+    border-radius: 10px;
+    width: calc(100% - 30px);
+    box-shadow: 0 0 36px rgba(0,0,0,0.8);
+    flex: 1 1 100%;
+    margin: 20px;
+}
+
+.bigcard img {
+    width: calc(90% - 30px);
+}
+
+.smallcards {
+    flex: 1 0 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    list-style: none;
+    border-radius: 10px;
+    margin-bottom: 70px;
+    width: 100%;
+}
+
+.smallcard {
+    flex: 1 0 100%;
+    margin: 20px;
+}
+
+.card {
+    flex: 1 0 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 36px rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 0;
+    /* overflow: hidden; */
+    /* This gives us 3 cards per row */
+    min-width: calc(50% - 40px);
+    opacity: 0.7;
+    transition: opacity 250ms linear, transform 250ms linear;
+}
+
+.card:hover {
+    opacity: 1;
+    transform: scale(0.95) rotate(-1deg);
+}
+
+.card h3 {
+    /* min-width: 90%; */
+    padding: 20px;
+    /* font-size: 16px; */
+    width: 95%;
+}
+
+.card a {
+    color: var(--light);
+}
+
+.card img {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.center {
+    text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+    header {
+        flex-direction: column;
+    }
+    nav ul li {
+        /* Because clickable links matter */
+        flex-direction: column;
+        /* padding: 0.5em; */
+    }
+}  
+/* 
+@media screen and (max-width: 768px) {
+    nav ul li {
+        flex-direction: column;
+        padding: 0.5em;
+    }
+}
+   */
