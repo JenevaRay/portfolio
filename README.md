@@ -24,7 +24,7 @@ assets/images/selfie.png    Me, Myself, and I.  Not three people.
 
 assets/images/Horiseon-deployed.png     the hero image from my Horiseon Social Solutions demo site, used as a reference to - guess what?  the Horiseon Social Solutions demo site that is packaged as part of this site.
 
-Horiseon-Social-Solutions-main  the (redeployed) site for the ![Horiseon Social Solutions Github](https://github.com/JenevaRay/Horiseon-Social-Solutions) demo site, redeployed internally (click on the image to go there).
+Horiseon-Social-Solutions-main  the (redeployed) site for the (github) https://github.com/JenevaRay/Horiseon-Social-Solutions demo site, redeployed internally (click on the image to go there).
 
 
 ## Installation
