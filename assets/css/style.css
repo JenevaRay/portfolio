@@ -1,39 +1,38 @@
+/* Things that are common everywhere */
 :root {
-    --grey: #333;
-    --light: #FFF;
-    --hover: #0077c0;
-    --dark: #000;
+    --card-text-color: #31333d;
+    --highlight-color: #91cccc;
+    --header-color: #435877;
+    --dark-background: #32343d;
 }
 
-/* Set the background color and font for the entire website */
+/* Things that are common across the whole page */
 body {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    background-color: #f5f5f5;
-    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    background-color: #edeef7;
 }
 
+/* The header bar, including navigation links in a responsive layout */
 header {
-    /* width: 100%; */
+    background-color: var(--dark-background);
+    margin: 0 0;
+    max-height: 80px;
+    height: auto;
     display: flex;
-    background-color: var(--light);
-    color: var(--grey);
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-    border-radius: 10px;
 }
 
-header h1 {
-    align-content: flex-start;
-    font-size: 250%;
-    font-style: "Brush Script MT, Brush Script Std, cursive";
+/* the navigation bar itself */
+header nav {
+    flex-direction: row;
 }
 
-nav ul {
+/* the structure of the navigation bar, in a responsive layout */
+header nav ul {
+    flex: 1 0 auto;
     align-items: center;
-    font-size: 150%;
     align-content: flex-end;
     display: flex;
     flex-direction: row;
@@ -41,197 +40,386 @@ nav ul {
     align-items: center;
     list-style: none;
     flex-wrap: nowrap;
-}
-
-nav ul li {
-    /* flex: 1 0 auto; */
-    margin-right: 20px;
-    padding: 1%;
-    flex-wrap: nowrap;
-}
-
-nav ul li a {
-    color: var(--dark);
-}
-
-a {
-    color: var(--dark);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.2s ease-in-out;
-}
-
-a:hover {
-    color: var(--hover);
-}
-
-main {
-    display: flex;
-    flex-flow: column wrap;
-}
-
-section {
-    flex: 1 0 auto;
-    background-color: var(--grey);
-    color: var(--light);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.8);
-}
-
-footer {
-    background-color: var(--grey);
-    color: var(--light);
-    padding: 20px;
-    text-align: center;
-}
-
-footer ol {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-}
-
-footer ol li a {
-    color: var(--light);
-}
-
-footer ol li {
-    flex: 1 0 auto;
-}
-
-figure {
-    display: block;
-}
-
-figcaption {
-    font-family: "Brush Script MT, Brush Script Std, cursive";
-    margin-bottom: 1em;
-}
-
-figcaption span {
-    font-size: 10px;
-}
-
-h2 {
-    padding: 20px;
-    font-size: 200%;
-    font-weight: bold;
-    justify-content: center;
-}
-
-h3 {
-    padding: 20px;
-    font-size: 150%;
-}
-
-section p {
-    padding: 20px;
     font-size: 16px;
-    width: 0.95fr;
-
+    margin-bottom: 26px;
+    margin-top: 32px;
+    margin-right: 60px;
 }
 
-.bigcards {
-    flex: 1 0 100%;
-    display: flex;
-    flex-flow: column wrap;
-    /* flex-direction: column; */
-    list-style: none;
-    border-radius: 10px;
-    width: calc(100%);
-    overflow: hidden;
+/* the items themsleves, including the padding between each element */
+header nav ul li { 
+    flex: 1 0 auto;
+    flex-wrap: nowrap;
+    padding-right: 10px;
 }
 
-.bigcard {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    flex-direction: column;
-    border-radius: 10px;
-    width: calc(100% - 30px);
-    box-shadow: 0 0 36px rgba(0,0,0,0.8);
-    flex: 1 1 100%;
-    margin: 20px;
+/* the links themselves, including the padding for oversized underlines */
+header nav ul li a {
+    text-decoration: none;
+    color: var(--highlight-color);
+    padding: 0px 10px 6px 10px;
+    border-bottom: 4px solid var(--highlight-color);
 }
 
-.bigcard img {
-    width: calc(90% - 30px);
+/* this is for the automatic wide spacing between the h1 and nav elements */
+header .automiddlemargin {
+    flex: 1 1 auto;
 }
 
-.smallcards {
-    flex: 1 0 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: stretch;
-    list-style: none;
-    border-radius: 10px;
-    margin-bottom: 70px;
+/* This is an image of me */
+figure img {
+    top: -50px;
+    bottom: -50px;
+    z-index: 999;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
     width: 100%;
-}
-
-.smallcard {
-    flex: 1 0 100%;
-    margin: 20px;
-}
-
-.card {
-    flex: 1 0 100%;
-    border-radius: 10px;
-    box-shadow: 0 0 36px rgba(0,0,0,0.8);
-    display: flex;
-    flex-direction: column;
-    flex: 0 0 0;
-    /* overflow: hidden; */
-    /* This gives us 3 cards per row */
-    min-width: calc(50% - 40px);
-    opacity: 0.7;
-    transition: opacity 250ms linear, transform 250ms linear;
-}
-
-.card:hover {
-    opacity: 1;
-    transform: scale(0.95) rotate(-1deg);
-}
-
-.card h3 {
-    /* min-width: 90%; */
-    padding: 20px;
-    /* font-size: 16px; */
-    width: 95%;
-}
-
-.card a {
-    color: var(--light);
-}
-
-.card img {
-    width: 100%;
+    display: block;
+    max-height: 200px;
+    object-fit: cover;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 10px;
 }
 
-.center {
-    text-align: center;
+figure img:hover {
+    transform: scale(1.5);
+    max-height: auto;
 }
 
-@media screen and (max-width: 992px) {
+/* this is the title header inset, so that it can share the same formatting system as the rest of the insets */
+header .inset {
+    top: 1px;
+    bottom: 24px;
+    right: 90px;
+    height: 52px;
+    width: 340px;
+}
+
+/* this is the title header */
+header h1 a {
+    display: inline-block;
+    font-weight: bold;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+    position: relative;
+    text-decoration: none;
+    color: var(--dark-background);
+    top: 1px;
+    bottom: 15px;
+    width: auto;
+    padding: 12px 13px 12px 75px;
+    font-size: 40px;
+    background-color: var(--highlight-color);    
+}
+
+/* the default text color */
+main {
+    color: var(--card-text-color);
+}
+
+/* the category headers with styling */
+h2 a {
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    width: 309px;
+    border-right: 4px solid var(--header-color);
+    text-decoration: none;
+    font-size: 40px;
+    height: 100%;
+    align-items: stretch;
+    min-width: 200px;
+    padding-right: 16px;
+    color: var(--header-color);
+}
+
+/* overrides for the smallest of category headers  */
+h2 a #aboutme {
+    min-height: 208px;
+    height: 360px;
+}
+h2 a footer {
+    min-height: 102px;
+}
+
+/* most of the page, not including header or top image */
+footer, .about-outer, .work-outer {
+    margin-top: 40px;
+    display: flex;
+    width: 100vw;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-right: 88px;
+}
+
+/* the about-me section and its paragraph style */
+.about-text p {
+    flex: 1 1 auto;
+    flex-flow: row wrap;
+    align-content: flex-end;
+    font-size: 12px;
+    padding-left: 37px;
+    color: var(--header-color);
+    max-width: calc(100vw - 446px);
+    line-height: 2;
+}
+
+/* the footer section and its flow */
+footer {
+    display: flex;
+    margin-bottom: 18px;
+    height: 142px;
+}
+
+/* the footer links and their flow */
+footer ol {
+    flex: 1 1 auto;
+    align-items: center;
+    align-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    flex-wrap: nowrap;
+    width: calc(100vw - 394px);
+    font-size: 16px;
+    margin: 32px 67px 58px 33px;
+}
+    
+/* the footer text elements */
+footer ol li { 
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    width: min-content;
+    margin-right: 1em;
+}
+
+/* the footer links elements */
+footer ol li a {
+    text-decoration: none;
+    color: var(--dark-background);
+    font-size: 15px;
+    padding: 0px 10px 6px 10px;
+    border-bottom: 4px solid var(--highlight-color);
+}
+
+/* the flow of the informative content */
+.about-text, .allcards {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+/* each card's sizing */
+.card img {
+    background-color: var(--dark-background);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    overflow: hidden;
+    border: 5px solid var(--highlight-color);
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+/* a hover effect, like what is implemented in the mockup .gif */
+.card img:hover {
+    opacity: 1;
+}
+
+/* container for the largest elements of the page */
+.bigcards {
+    width: calc(100vw - 446px);
+}
+
+/* the largest elements of the page in a responsive layout */
+.bigcard img {
+    max-height: 390px;
+    max-width: calc(100vw - 454px);
+    width: 890px;
+}
+
+/* container for the most prolific elements of the page */
+.smallcards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+/* each small card and how it responds in a responsive layout */
+.smallcard {
+    flex: 1 1 100%;
+    flex-flow: row wrap;
+}
+
+/* each actual small card  */
+.smallcard img {
+    max-width: calc(430px + 10px);
+    max-height: min-content
+}
+
+/* a general class for all cards, because DRY */
+.card {
+    position: relative;
+    margin: 8px;
+    max-width: 440px;
+}
+
+/* each inset, including the header inset */
+.inset {
+    background-color: var(--highlight-color) !important;
+    position: absolute;
+}
+
+/* card insets */
+.card .inset {
+    bottom: 20px;
+    left: 4px;
+    padding: 17px 10px 20px 10px;
+    font-size: 20px;
+    flex-wrap: nowrap;
+}
+
+/* card inset headers */
+.card .inset h3 {
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+/* card inset comments */
+.card .inset p {
+    padding-top: 17px;
+    padding-bottom: 0px;
+}
+
+/* This fix also works on 992 width */
+@media screen and (max-width: 768px) {
+    /* because the last link kept overflowing out of the page */
+    footer ol {
+        margin: auto;
+    }
+    footer ol li {
+        margin: 4px;
+    }
+}
+
+/* the smallest screens required manual flow intervention and sizing, almost everything else was automatically responsive */
+/* test it out! it's a vertical flow to fit on people's iPhone 12 screens */
+@media screen and (max-width: 494px) {
+    /* put the title and the nav bar on separate lines */
     header {
         flex-direction: column;
+        max-height: min-content;
     }
-    nav ul li {
-        /* Because clickable links matter */
-        flex-direction: column;
-        /* padding: 0.5em; */
+    
+    /* reset the padding to be visually appealing */
+    header h1 a {
+        padding: 12px;
     }
-}  
-/* 
-@media screen and (max-width: 768px) {
-    nav ul li {
+
+    /* Reformat the nav bar cells for uniformity */
+    header nav ul {
+        margin: 0;
+        margin-bottom: 26px;
+        margin-top: 16px;
+    }
+
+    /* Change the content links to take up less vertical space (premium) by giving them a line of their own */
+    h2 a {
+        max-width:min-content;
+        justify-content: center;
+        text-align: center;
+        border-right: 0;
+        padding-left: 16px;
+        text-align: center;
+        border-bottom: 4px solid var(--header-color);
+    }
+
+    /* because space constraints and making things look presentable */
+    .card p {
+        font-size: 14px;
+    }
+
+    /* also space constraints */
+    h2 a #aboutme {
+        height: min-content;
+    }
+
+    /* because space constraints, again */
+    footer {
+        margin-top: 10px;
+    }
+
+    /* footer links should take up the whole row */
+    footer ol {
+        width: 100%;
+        margin: 32px 0px 58px 0px;
+        justify-content: center;
+    }
+    
+    /* reset formatting for the cells to be consistent and visually appealing */
+    footer ol li { 
+        flex: 1 0 auto;
+        flex-wrap: nowrap;
+        margin: 0px 4px 0px 4px;
+        /* margin-right: 8px; */
+    }
+    /* reset formatting for the links themselves */
+    footer ol li a {
+        padding-right: 2px;
+        padding-left: 2px;
+        padding-bottom: 6px;
+    }
+
+    /* make the page flow vertically and remove wastes of space */
+    .about-outer, .work-outer, .smallcards, footer {
         flex-direction: column;
-        padding: 0.5em;
+        padding-right: 0px;
+    }
+    
+    /* readable smaller text, because space constraints and resetting formatting like big padding */
+    .about-text p {
+        padding-left: 12px;
+        padding-right: 12px;
+        flex-wrap: wrap;
+        color: var(--header-color);
+        max-width: calc(100vw - 24px);
+        line-height: 2;
+    }
+    
+    /* images should not be wider than the screen.  no no no, this has to be fixed! */
+    /* 26 px for accounting for padding/margins */
+    .bigcard img {
+        height: auto;
+        max-width: calc(100vw - 26px);
+    }
+
+    /* again, images */
+    .bigcards {
+        max-width: calc(100vw);
+        height: auto;
+    }
+
+    /* images should not be wider than the screen.  no no no, this has to be fixed! */
+    /* 26 px for accounting for padding/margins */
+    .smallcard {
+        max-width: calc(100vw - 26px);
+        width: calc(100vw - 26px);
+    }
+
+    .smallcard img {
+        max-height: min-content;
+        max-width: calc(100vw - 26px);
     }
 }
-   */
+

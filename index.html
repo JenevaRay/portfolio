@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <title>Jeneva Ray Portfolio</title>
+    <title>Jeneva Ray's Portfolio</title>
 </head>
 <body>
     <main>
         <header>
-            <h1><a href="#">Jeneva Ray</a></h1>
+            <h1><a href="#">Jeneva&nbsp;Ray</a></h1>
+            <div class="automiddlemargin"></div>
             <nav>
                 <ul>
                     <li><a href=#aboutme>About&nbsp;Me</a></li>
@@ -21,54 +22,74 @@
                 </ul>
             </nav>
         </header>
-        <div class="content">
-            <div class="bigcards">
-                <h2 id="aboutme" class="center"><a href=#aboutme>About Me</a></h2>
-                <section class="bigcard card">
-                    <img src="https://as1.ftcdn.net/v2/jpg/01/16/75/94/1000_F_116759427_l4AGnmouXXUnW4YGKHJrmYHoMrBpjh0L.jpg" alt="Jeneva, with long blonde hair and wearing a floral dress, circa 2023.">
-                    <h3>Jeneva Ray</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora asperiores error doloribus cum dignissimos temporibus cupiditate id velit necessitatibus assumenda adipisci quo autem exercitationem sunt alias ullam deleniti molestias impedit aliquam qui sit, ex sint commodi! Perspiciatis, hic! Expedita veritatis quia accusamus voluptatem quod. Illo, placeat iusto sed molestiae enim voluptas tempora, perspiciatis, quisquam eligendi obcaecati sunt suscipit doloremque quasi!</p>
-                </section>
-                <h2 id="work" class="center"><a href=#work>Work</a></h2>    
-                <section class="bigcard card">
-                    <img href="https://jenevaray.github.io/Horiseon-Social-Solutions/" src="./assets/images/Horiseon-deployed.png" alt="My first deployed application.">
-                    <h3><a href="https://jenevaray.github.io/Horiseon-Social-Solutions/">Horiseon Social Solutions</a></h3>
-                    <p>Rewritten to actually work from a broken implementation.</p>
-                    <p>This is my first publicly deployed "application", which is more a functional mockup than a full website.</p>
-                </section>
+        <figure>
+            <img class="banner" src="./assets/images/selfie.png" alt="Jeneva, circa 2023">
+        </figure>
+        <div class="about-outer">
+            <h2 id="aboutme"><a href=#aboutme>About<br />Me</a></h2>
+            <div class="about-text">
+                <p>Needing precision work?  I'll take it on.  I come from a background in pharmacy, where every little thing matters.</p>
+                <p>I have a hunger to learn more, so that I can better help people.  Are you the right company for me?</p>
+                <p>I have experience with analysis from data analysis to formal analysis (a higher tier from static analysis)</p>
+                <p>I have experience with Cassandra NoSQL and administration, data parsers for very different information for information sources, use and storage</p>
+                <p>I have experience with multiple languages, including Python, and I actively administer Linux systems.</p>
             </div>
-            <div class="smallcards">
-                <section class="smallcard card">
-                    <img src="/assets/images/developer-code-close-up-laptop.jpg" alt="placeholder">
-                    <h3>Lorem, ipsum dolor.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quo voluptatum, minus iste veritatis earum debitis maxime nostrum eveniet saepe.</p>
-                </section>
-                <section class="smallcard card">
-                    <img src="/assets/images/javascript-programmer-code-technology-coding-css.jpg" alt="placeholder">
-                    <h3>Lorem, ipsum dolor.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quo voluptatum, minus iste veritatis earum debitis maxime nostrum eveniet saepe.</p>
-                </section>
-                <section class="smallcard card">
-                    <img src="/assets/images/desktop-wallpaper-office-desk-workgroup-teamwork.jpg" alt="placeholder">
-                    <h3>Lorem, ipsum dolor.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quo voluptatum, minus iste veritatis earum debitis maxime nostrum eveniet saepe.</p>
-                </section>
-                <section class="smallcard card">
-                    <img src="/assets/images/desktop-wallpaper-teamwork-team-building.jpg" alt="placeholder">
-                    <h3>Lorem, ipsum dolor.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quo voluptatum, minus iste veritatis earum debitis maxime nostrum eveniet saepe.</p>
-                </section>
+        </div>
+        <div class="work-outer">
+            <h2 id="work" class="left"><a href=#work>Work</a></h2>    
+            <div class="allcards">
+                <div class="bigcards">
+                    <section class="bigcard card">
+                        <a href="./Horiseon-Social-Solutions-main/index.html"><img src="./assets/images/cropped-Horiseon-deployed.png" alt="My first deployed application."></a>
+                        <article class="inset">
+                            <h3>Horiseon</h3>
+                            <p>Social Solutions (demo site)</p>
+                        </article>
+                    </section>
+                </div>
+                <div class="smallcards">
+                    <section class="smallcard card">
+                        <!--all lorem ipsum images from pxfuel.com, royalty-free photos -->
+                        <a href="#"><img src="/assets/images/cropped-developer-code-close-up-laptop.png" alt="placeholder"></a>
+                        <article class="inset">
+                            <h3>Lorem, ipsum dolor</h3>
+                            <p>sit amet</p>
+                        </article>
+                    </section>
+                    <section class="smallcard card">
+                        <a href="#"><img src="/assets/images/cropped-javascript-programmer-code-technology-coding-css.png" alt="placeholder"></a>
+                        <article class="inset">
+                            <h3>Sit amet consectetur</h3>
+                            <p>Voluptatum</p>
+                        </article>
+                    </section>
+                    <section class="smallcard card">
+                        <a href="#"><img src="/assets/images/cropped-desktop-wallpaper-office-desk-workgroup-teamwork.png" alt="placeholder"></a>
+                        <article class="inset">
+                            <h3>Adipisicing elit</h3>
+                            <p>Minus iste</p>
+                        </article>
+                    </section>
+                    <section class="smallcard card">
+                        <a href="#"><img src="/assets/images/cropped-desktop-wallpaper-teamwork-team-building.png" alt="placeholder"></a>
+                        <article class="inset">
+                            <h3>Sapiente quo</h3>
+                            <p>Veritatis earum</p>
+                        </article>
+                    </section>
+                </div>
             </div>
         </div>
     </main>
+    <!--I'd use asides, but this site is remarkably image and format heavy and word-light. -->
     <footer>
-        <h2 id="contact" class="center">Contact Me</h2>
+        <h2 id="contact"><a href=#contact>Contact<br />Me</a></h2>
         <ol>
-            <li><a href="tel:701-732-0432">📞 Telephone/Text</a></li>
+            <li><a href="tel:701-732-0432">415.368.1892</a></li><!-- note, I actually get these calls -->
             <li><a href="mailto:JenevaRay@gmail.com">Email</a></li>
             <li><a href="https://github.com/JenevaRay">GitHub</a></li>
             <li><a href="https://www.linkedin.com/in/jenevaray/">LinkedIn</a></li>
-            <li><a href="#">Resume</a></li>
+            <li><a href="#">Resume</a></li><!-- securely hosted at Certiphi. -->
         </ol>
     </footer>
 </body>
